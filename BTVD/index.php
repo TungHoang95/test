@@ -28,9 +28,36 @@ $a =array('1','2','3');
 $b = array('a','b');
 foreach ($a as $key=>$value){
    foreach ($b as $keys => $values){
+       
        $array[] = $value."-".$values;
    }
 }
 echo "<pre>";
 print_r($array);
 echo "</pre>";
+
+
+// cho 3 mang nhu phia duoi,
+
+// 
+$a =array('1','2','3');
+$b = array('a','b');
+$c = array('x','y',9);
+
+function GhepPhanTu($arr1, $arr2){
+    //todo viet code
+}
+
+$d=GhepPhanTu($a,$b);
+$e=GhepPhanTu($d,$c);
+
+print_r($e);
+
+$finnal=[$a,$b,$c];
+
+while(true){
+    //todo: ghep phan tu cua tung mang trong mang $finnal cho den khi count(finnal)==0
+        //dieu kien thoat: $finnal count ==1 break;
+        
+}
+

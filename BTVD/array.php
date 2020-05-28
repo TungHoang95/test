@@ -25,4 +25,24 @@ for($i = 1; $i <= count($a); $i++){
         print_r('</br>');
     }   
 }
+
+function insertAfterIndex($arrSource, $item, $index){
+//todo: write code here
+}
+
+$arr=["A",1,"d","b",5,8];
+
+$result=insertAfterIndex($arr, "x",1);
+print_r($result);
+// will be ["A",1,"x" ....]
+
+$result=insertAfterIndex($arr, "x",2);
+print_r($result);
+// will be ["A",1,"d","x" ....]
+
+$result=insertAfterIndex($arr, "x",10);
+print_r($result);
+// will be ["A",1 ....8,"x"]
+
+
 ?>
