@@ -1,38 +1,45 @@
 <?php 
-// $txt = "Hello world!";
-// $x = 5;
-// $y = 10.5;
-// $z = ($x + $y);
+//  $txt = "Hello world!";
+//  $txt=9;
+//  $txt=null;
+//  var_dump($txt);
+// // $x = 5;
+// // $y = 10.5;
+// // $z = ($x + $y);
 
-// echo $z;
-//  $x = 5; // global scope
+// // echo $z;
+// //  $x = 5; // global scope
  
-// function myTest() {
-//   // using x inside this function will generate an error
-//   echo "Variable x inside function is:";
-// } 
-// myTest();
+// // function myTest() {
+// //   // using x inside this function will generate an error
+// //   echo "Variable x inside function is:";
+// // } 
+// // myTest();
 
-// echo "Variable x outside function is:".$x;
-// $x = 5;
-// $y = 10;
+// // echo "Variable x outside function is:".$x;
+// // $x = 5;
+// // $y = 10;
 
+// // function myTest() {
+// //   global $x, $y;
+// //   $y = $x + $y;
+// // }
+
+// // myTest();
+// // echo $y; // outputs 15
 // function myTest() {
-//   global $x, $y;
-//   $y = $x + $y;
+//   static $x = 0;
+//   echo $x;
+//   $x++;
 // }
 
 // myTest();
-// echo $y; // outputs 15
-function myTest() {
-  static $x = 0;
-  echo $x;
-  $x++;
-}
-
-myTest();
-echo "<br>";
-myTest();
-echo "<br>";
-myTest();   // 0 1 2
+// echo "<br>";
+// myTest();
+// echo "<br>";
+// myTest();   // 0 1 2
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+print_r(array_change_key_case($age,CASE_UPPER));
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+print_r(array_change_key_case($age,CASE_LOWER));
  ?>

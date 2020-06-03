@@ -23,41 +23,85 @@
 // echo "<pre>";
 // print_r($result);
 // echo "</pre>";
-$array =array();
-$a =array('1','2','3');
-$b = array('a','b');
-foreach ($a as $key=>$value){
-   foreach ($b as $keys => $values){
+// $array =array();
+// $a =array('1','2','3');
+// $b = array('a','b');
+// foreach ($a as $key=>$value){
+//    foreach ($b as $keys => $values){
        
-       $array[] = $value."-".$values;
-   }
-}
-echo "<pre>";
-print_r($array);
-echo "</pre>";
+//        $array[] = $value."-".$values;
+//    }
+// }
+// echo "<pre>";
+// print_r($array);
+// echo "</pre>";
 
 
 // cho 3 mang nhu phia duoi,
 
 // 
-$a =array('1','2','3');
-$b = array('a','b');
-$c = array('x','y',9);
+// $a =array('1','2','3');
+// $b = array('a','b');
+// $c = array('x','y',9);
 
-function GhepPhanTu($arr1, $arr2){
-    //todo viet code
-}
+// function GhepPhanTu($a, $b){
+//     // todo viet code
+//   foreach ($a as $key => $value) {
+// 		  	 foreach ($b as $key1 => $value1) {
+// 		  	 $d[] = [$value,$value1];
+// 		  	 }
+// 	}
+// 	return $d;
 
-$d=GhepPhanTu($a,$b);
-$e=GhepPhanTu($d,$c);
+// }
 
-print_r($e);
+// $d=GhepPhanTu($a,$b);
+// //[[1,a],[1,b],[2,a],[2,b],[3,a],[3,b]]
+// print_r($d);
 
-$finnal=[$a,$b,$c];
+//  $e=GhepPhanTu($d,$c);
+// print_r($e);
 
-while(true){
-    //todo: ghep phan tu cua tung mang trong mang $finnal cho den khi count(finnal)==0
-        //dieu kien thoat: $finnal count ==1 break;
-        
-}
 
+//[[1,a,x],[1,a,y],[1,a,9] ,...]
+//print_r($d);
+// print_r($e[0]);
+
+// $final = [$a,$b,$c];
+
+//  $txt = "Hello world!";
+//  $txt =9;
+//  $txt = array(null);
+// print_r($txt);
+//  echo count($txt);
+   $a =array('1','2','3');
+    $b = array('a','b','c');
+    $c = array('x','y','9');
+
+function GhepPhanTu($a, $b, $c){
+    foreach ($a as $key => $value) {
+        foreach ($b as $key1 => $value1) {
+            $d[] = [$value,$value1];
+        }
+    }
+    echo "<pre>";
+    print_r($d);
+    echo "</pre>";   
+    $e = array();
+    $j=0;
+    for ($i=0; $i < count($d) ; $i++) { 
+        array_push($d[$i], $c[$j]);
+        array_push($e, $d[$i]);
+        $j++;
+        if ($j == count($c)) {
+            $j = 0;
+        };
+    };
+    echo "<pre>";
+    print_r($e);
+    echo "</pre>";
+
+};
+echo GhepPhanTu($a, $b, $c);
+
+?>
