@@ -12,7 +12,7 @@ class Version
         if(is_array($num)){
             $result = "";
             foreach($arrVersion as $arr){
-                $result .= "$arr" ;
+                $result = "$arr" ;
             }        
             $this->NumberOfVersion = $result;
         }else{
@@ -28,10 +28,10 @@ class Version
                 $So = 0;
             break;
             case 1:
-                $So = 1;
+                $So = "một";
             break;
             case 2:
-                $So = 2;
+                $So = "hai";
             break;
             case 3:
                 $So = "ba";
