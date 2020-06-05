@@ -11,7 +11,7 @@ class Version
     public function NumberOfVersion($num){
         if(is_array($num)){
             $result = "";
-            foreach($num as $arr){
+            foreach($arrVersion as $arr){
                 $result .= "$arr" ;
             }        
             $this->NumberOfVersion = $result;
@@ -85,7 +85,7 @@ echo "\n";
 // kq: 1 2 3
 
 //------------
-$arrVersion =[1, 2, 3];
+$arrVersion = [$ver1, $ver2 , $ver3];
 $arr = new Version;
 $arr->NumberOfVersion($arrVersion);
 print_r($arr);
@@ -99,4 +99,5 @@ $arrResult = $ver4->ThayDoiVersion($arrVersion);
 print_r($arrResult);
 //in ra $arrResult
 //ket qua mong muon la MOT, HAI , BA, MOT NGHIN 
+
 ?>
