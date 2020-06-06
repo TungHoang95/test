@@ -1,7 +1,8 @@
 <?php
 
 class Version
-{
+{ 
+    public $NumberOfVersion;
     public function toString(){
         $NumberOfVersion = range(0,1000000);
         return "Current version $NumberOfVersion[1]";
@@ -11,8 +12,8 @@ class Version
     public function NumberOfVersion($num){
         if(is_array($num)){
             $result = "";
-            foreach($arrVersion as $arr){
-                $result = "$arr" ;
+            foreach($num as $arr){
+                $result .= "$arr" ;
             }        
             $this->NumberOfVersion = $result;
         }else{
@@ -85,7 +86,7 @@ echo "\n";
 // kq: 1 2 3
 
 //------------
-$arrVersion = [$ver1, $ver2 , $ver3];
+$arrVersion = [1,2,3];
 $arr = new Version;
 $arr->NumberOfVersion($arrVersion);
 print_r($arr);
